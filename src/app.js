@@ -48,7 +48,6 @@ app.get('/weather', (req, res) =>{
             error: "You must provide an address"
         })
     }
-    console.log(req.query.address)
     const location = req.query.address
     geocode( location, (error, {longitude, latitude, location} = {})=> {
         if (error){
@@ -73,7 +72,6 @@ app.get('/products', (req, res) => {
              error: "You must provide a search term "
          })
     }
-    console.log(req.query.search)
      res.send({
          products: []
      })
